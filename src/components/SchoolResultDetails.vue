@@ -13,7 +13,7 @@
 					<div class="chart">
 						<Doughnut v-bind:chartData="group.dataSet" v-bind:cutoutPercentage="50" />
 						<div class="chart__content">
-							<div class="chart__value">{{group.el.studentsAmount}}</div>
+							<div class="chart__value">{{group.result}}</div>
 						</div>
 					</div>
 				</div>
