@@ -34,7 +34,7 @@
 		</div>
 		<div class="form__info-cards">
 			<div class="form__info-cards-col">
-				<div class="form__info-card">
+				<div class="form__info-card form__info-card--big">
 					<input v-model="infoCard" placeholder="הזן נושה..." class="form__info-card-title-input" type="text">
 					<div class="form__info-card-circle">
 						<div class="form__info-card-circle-square">
@@ -47,21 +47,21 @@
 			<div class="form__info-cards-col">
 				<div class="form__info-card">
 					<input v-model="infoCard2" placeholder="הזן נושה..." class="form__info-card-title-input" type="text">
-					<div class="form__info-card-circle">
+					
 						<div class="form__info-card-circle-square">
-							<div class="form__info-card-title">הזן נושה</div>
+							<div class="form__info-card-title form__info-card-title--blue">הזן נושה</div>
 							<input v-model="infoCardVal2" placeholder="..."  type="text">
 						</div>
-					</div>
+					
 				</div>
 				<div class="form__info-card">
 					<input v-model="infoCard3" placeholder="הזן נושה..." class="form__info-card-title-input" type="text">
-					<div class="form__info-card-circle">
+					
 						<div class="form__info-card-circle-square">
-							<div class="form__info-card-title">הזן נושה</div>
+							<div class="form__info-card-title form__info-card-title--yellow">הזן נושה</div>
 							<input v-model="infoCardVal3" placeholder="..."  type="text">
 						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -198,8 +198,8 @@ export default {
 		justify-content: center;
 	}
 	.form__info-cards-col{
-		width: 40%;
-		margin: 0 5%;
+		width: 50%;
+		padding: 0 8px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -215,6 +215,11 @@ export default {
 		&:last-child{
 			margin-bottom: 0;
 		}
+		&--big{
+			.form__info-card-circle{
+				margin: auto;
+			}
+		}		
 	}
 	.form__info-card-title-input{
 		border: 1px solid #D7E3F9;

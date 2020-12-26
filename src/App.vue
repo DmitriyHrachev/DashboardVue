@@ -246,6 +246,7 @@ html, body{
     }
     &--big{
         height: 45.828vh;
+        margin-bottom: pxToVh(24);
         >div{
             position: relative;
             height: 100%;
@@ -435,6 +436,10 @@ html, body{
         box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.04);
         padding: pxToVh(24) 24px;
         margin-bottom: pxToVh(16);
+        position: sticky;
+        top: 0;
+        right: 0;
+        width: 100%;
     }
     &__header-logo{
         width: pxToVh(70);
@@ -594,6 +599,48 @@ html, body{
         line-height: 38px;
         color: #929BAA;
         background-color: transparent;
+    }
+    &__info-card-circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(251, 97, 134, 0.1);
+        border: 2px solid #FB6186;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    &__info-card-circle-square{
+        border: 1px solid #DCE7FA;
+        border-radius: 4px;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        input{
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            font-size: 60px;
+            line-height: 1;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    &__info-card-title{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;
+        padding-top: 12px;
+    }
+    &__info-card-title--blue{
+        color: #00ACE9;
+    }
+    &__info-card-title--yellow{
+        color: #FFDA23;
     }
 }
 
