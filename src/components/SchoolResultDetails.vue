@@ -104,7 +104,11 @@ props: ['groups'],
 				const group = { el }
 				group.dataSet = [parseInt(el.inCampus) || undefined, parseInt(el.offStudy) || undefined, parseInt(el.activity) || undefined, parseInt(el.ill) || undefined, parseInt(el.banned) || undefined];
 				group.result = group.dataSet.reduce((acc1, el) => {
-					acc1 += parseInt(el);
+					let amount = el;
+					if(Number.isNaN(parseInt(amount))) {
+						amount = 0;
+					}
+					acc1 += parseInt(amount);
 					return acc1;
 				}, 0); 
 				acc = [...acc, group];  
