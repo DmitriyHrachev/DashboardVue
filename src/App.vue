@@ -269,9 +269,25 @@ html, body{
     &--ltr{
         direction: ltr;
     }    
-    // &--height{
-    //     height: 38vh;
-    // }
+    &--height{
+        height: 45.828vh;
+        margin-bottom: pxToVh(24);
+        >div{
+            position: relative;
+            height: 100%;
+        }
+        canvas{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    
+        }
+        div.chart__content{
+            position: absolute; 
+            height: auto;
+        }
+    }
 }
 
 .chart-legend{
@@ -338,23 +354,40 @@ html, body{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: pxToVh(16);
-    max-height: 55vh;
-    overflow-y: auto;
+    // max-height: 55vh;
+    height: 100%;
+    // overflow-y: auto;
     &__item{
         width: 50%;
         margin-bottom: 16px;
-
         .chart{
-            max-width: 135px;
+            max-width: 90%;
             margin: 0 auto;
             display: flex;
             position: relative;
             justify-content: center;
+            padding-bottom: 90%;
+            
+            >div{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            canvas{
+                max-width: 100%;
+                max-height: 100%;
+            }
             &__value{
                 font-size: pxToVh(20);
             }
             &__content{
                 position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         canvas{
@@ -380,9 +413,14 @@ html, body{
     }
 
     .charts{
+        max-height: 100%;
         &__item{
             width: 33.3333%;
         }
+    }
+
+    .charts__item .chart{
+        max-width: 90%;
     }
 }
 
@@ -392,6 +430,21 @@ html, body{
             height: 32.828vh;
         }
     }
+    .charts__item{
+        width: 50%;
+        .chart{
+            max-width: 90%;
+        }
+    }
+
+    .charts__item .chart{
+        max-width: 90%;
+    }
+
+    .chart--big{
+        height: 30.828vh;
+    }
+    
 }
 
 .clock{

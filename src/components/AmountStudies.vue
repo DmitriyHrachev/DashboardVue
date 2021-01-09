@@ -7,7 +7,7 @@
             <div class="chart chart--height">
                 <Bar v-bind:chartData="prepareData"  />
             </div>
-            <ul class="chart-legend chart-legend--center chart-legend--mt">
+            <!-- <ul class="chart-legend chart-legend--center chart-legend--mt">
                 <li class="chart-legend__item">
                     <div class="chart-legend__item-indicator" style="background: #E5F7FD;border: 1px solid #00ACE9;"></div>
                     <div class="chart-legend__item-title">מספר הילדים בפנימייה</div>
@@ -16,7 +16,7 @@
                     <div class="chart-legend__item-indicator" style="background: #FFEFF3; border: 1px solid #FB6186;"></div>
                     <div class="chart-legend__item-title">מספר הילדים בבית הספר</div>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </template>
