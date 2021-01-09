@@ -361,12 +361,12 @@ html, body{
         width: 50%;
         margin-bottom: 16px;
         .chart{
-            max-width: 90%;
+            max-width: 70%;
             margin: 0 auto;
             display: flex;
             position: relative;
             justify-content: center;
-            padding-bottom: 90%;
+            padding-bottom: 70%;
             
             >div{
                 width: 100%;
