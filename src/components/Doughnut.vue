@@ -23,6 +23,7 @@ export default {
 	  const dataSet = {
 		borderWidth: 2,
 		datasets: [{
+			label: '',
 			data: this.chartData,
 			datalabels: {
 				color: '#000',			
