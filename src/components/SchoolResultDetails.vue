@@ -84,13 +84,13 @@ props: ['groups'],
   },
   methods: {
 	  studentsOffCampus(group) {
-		  if(!group.el.offStudy)  {
+		  if(!(group.el.studentsAmount && group.el.inCampus))  {
 			  return 9;
 		  }
 		  return parseInt(group.el.studentsAmount) - parseInt(group.el.inCampus)
 	  },
 	  studentsInCampus(group) {
-		  if(!group.el.offStudy)  {
+		  if(!group.el.inCampus)  {
 			  return 21;
 		  }
 		  return parseInt(group.el.inCampus)
@@ -116,12 +116,13 @@ props: ['groups'],
 			}, []);
 			return result;
 		}
-		return [{dataSet: this.groupsDataSetMock1, result: 30,el: {groupName: 'גליל'}},
-		{dataSet: this.groupsDataSetMock2, result: 29, el: {groupName: 'גליל'}},
-		{dataSet: this.groupsDataSetMock3, result: 33, el: {groupName: 'גליל'}}, 
-		{dataSet: this.groupsDataSetMock4, result: 31, el: {groupName: 'גליל'}},
-		{dataSet: this.groupsDataSetMock5, result: 30, el: {groupName: 'גליל'}},
-		{dataSet: this.groupsDataSetMock6, result: 27, el: {groupName: 'גליל'}}
+		return [
+		{dataSet: this.groupsDataSetMock1, result: 30,el: {groupName: 'גליל', inCampus: 21, studentsAmount: 30}},
+		{dataSet: this.groupsDataSetMock2, result: 29, el: {groupName: 'גליל', inCampus: 19, studentsAmount: 29}},
+		{dataSet: this.groupsDataSetMock3, result: 33, el: {groupName: 'גליל', inCampus: 20, studentsAmount: 33}}, 
+		{dataSet: this.groupsDataSetMock4, result: 31, el: {groupName: 'גליל', inCampus: 17, studentsAmount: 31}},
+		{dataSet: this.groupsDataSetMock5, result: 30, el: {groupName: 'גליל', inCampus: 29, studentsAmount: 30}},
+		{dataSet: this.groupsDataSetMock6, result: 27, el: {groupName: 'גליל', inCampus: 15, studentsAmount: 27}}
 		] 
 	   }
   }
